@@ -19,6 +19,7 @@ def find_biggest_variation(weather_data_list):
         max=day_data['Max']
         min=day_data['Min']
         if x < (max-min):
+            x = max - min
             day = OrderedDict([('Max(F)', max), ('Min(F)', min), ('Day', day)])
     return day
 

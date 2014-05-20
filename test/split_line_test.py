@@ -17,11 +17,11 @@ def test_split_line_takes_a_string_as_argument():
     assert_raises(TypeError, split_line)
 
 
-#Detta test kan kommenteras bort om man inte vill test 'Undantagshantering' på C- eller A-nivå
-def test_split_line_raises_ValueError_with_correct_error_message_if_fed_a_blank_line():
-    with assert_raises(ValueError) as e:
-        split_line('')
-    assert_equal(e.exception.message, 'can not parse empty line')
+# #Detta test kan kommenteras bort om man inte vill test 'Undantagshantering' på C- eller A-nivå
+# def test_split_line_raises_ValueError_with_correct_error_message_if_fed_a_blank_line():
+#     with assert_raises(ValueError) as e:
+#         split_line('')
+#     assert_equal(e.exception.message, 'can not parse empty line')
 
 @with_setup(setup())
 def test_split_line_returns_a_list():

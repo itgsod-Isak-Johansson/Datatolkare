@@ -17,11 +17,11 @@ def setup():
 def test_encode_line_takes_a_list_as_argument():
     assert_raises(TypeError, encode_line)
 
-#Detta test kan kommenteras bort om man inte vill testa 'Undantagshantering' på C- eller A-nivå
-def test_encode_line_raises_ValueError_with_correct_error_message_if_list_is_too_short():
-    with assert_raises(ValueError) as e:
-        encode_line([1,2])
-    assert_equal(e.exception.message, 'incomplete list')
+# #Detta test kan kommenteras bort om man inte vill testa 'Undantagshantering' på C- eller A-nivå
+# def test_encode_line_raises_ValueError_with_correct_error_message_if_list_is_too_short():
+#     with assert_raises(ValueError) as e:
+#         encode_line([1,2])
+#     assert_equal(e.exception.message, 'incomplete list')
 
 
 @with_setup(setup())
