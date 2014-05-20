@@ -19,8 +19,8 @@ def find_biggest_variation(weather_data_list):
         max=day_data['Max']
         min=day_data['Min']
         if x < (max-min):
-            x = max-min
-    return x
+            day = OrderedDict([('Max(F)', max), ('Min(F)', min), ('Day', day)])
+    return day
 
 def load_weather_file(filename):
     weather_data_line = []
@@ -38,6 +38,6 @@ def main(file_location):
     for line in list_of_lines_from_weather_data:
         list_of_weather_dictionaries.append(encode_line(split_line(line)))
         #print list_of_weather_dictionaries
-    print find_biggest_variation(list_of_weather_dictionaries)
+    print find_biggest_variation(list_of_weather_dictionaries),
 main('weather.dat')
 
