@@ -43,4 +43,6 @@ def main(file_location):
     for line in list_of_lines_from_weather_data:
         list_of_weather_dictionaries.append(encode_line(split_line(line)))
         #print list_of_weather_dictionaries
-    print find_biggest_variation(list_of_weather_dictionaries)
+    day_max_min_dict = find_biggest_variation(list_of_weather_dictionaries)
+    print 'Day {0} had the biggest variation ({1} degrees)'.format(day_max_min_dict['date'], float(day_max_min_dict['max']-day_max_min_dict['min']))
+
