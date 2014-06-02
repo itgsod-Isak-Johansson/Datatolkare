@@ -93,7 +93,7 @@ där skillnaden mellan max- och mintemperatur är som störst
 
 #### load_weather_file ####
 
-Tar emot en sökväg till en fil, läser in den, och returnerar en array med varje relevant rad i filen
+Tar emot en sökväg till en fil, läser in den, och returnerar en array med varje *relevant* rad i filen
 
 #### main ####
 
